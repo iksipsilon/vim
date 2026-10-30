@@ -35,6 +35,14 @@ l: Replace this instance and quit.
 # To create a new empty vertical split, use the command 
 :vnew
 
+# for horizontal splits
+:split <other-filname>   or  Ctrl+w then s  and for new file Ctrl+w then n
+
+to toggle between splits use Ctrl+w
+
+# pressing Ctrl+W then w cycles through all open windows. 
+# To resize windows, use Ctrl+W with + or - to change height, and < or > to change width.
+
 
 
 	DELETE MULTIPLE LINES
@@ -42,3 +50,5 @@ l: Replace this instance and quit.
 # to delete lines 5 through 10, you would type:
 :5,10d
 
+# to delete 7 lines down including the current line:
+7dd
