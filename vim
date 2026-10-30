@@ -1,13 +1,22 @@
+  A short list of motions:
+    w - until the start of the next word, EXCLUDING its first character.
+    e - to the end of the current word, INCLUDING the last character.
+    $ - to the end of the line, INCLUDING the last character.
+	0 - to the start of the line
+
+Typing a number before a motion repeats it that many times.
+
+
+
+
+
 	REPLACE OCCURRENCES OF A WORD
 
-
-To replace all occurrences of a word in a file with approval for each case, use the substitute command with the global and confirm flags.
-
-Enter command mode by typing :.
-Type the following command, replacing old and new with your desired text:
-:%s/old/new/gc
-
-Press Enter.
+     type   :#,#s/old/new/g    where #,# are the line numbers of the range
+                               of lines where the substitution is to be done.
+     Type   :%s/old/new/g      to change every occurrence in the whole file.
+     Type   :%s/old/new/gc     to find every occurrence in the whole file,
+                               with a prompt whether to substitute or not.
 
 %: Targets the entire file (from the first to the last line). 
 s: Stands for substitute.
@@ -45,10 +54,71 @@ to toggle between splits use Ctrl+w
 
 
 
-	DELETE MULTIPLE LINES
+	DELETING
+
+
+d   number   motion
+d3w  # deletes three words
+
+# to delete 7 lines down including the current line:
+7dd
 
 # to delete lines 5 through 10, you would type:
 :5,10d
 
-# to delete 7 lines down including the current line:
-7dd
+r - replace the character under the cursor
+R - replace the following characters without moving the text to the right.
+
+c<motion> - change (to the end of the word, beginning of line etc.)
+
+
+	UNDO/REDO
+
+u  		# to undo the last commands
+U  		# to undo all the changes on a line
+Ctrl+r  # to redo
+
+
+
+	MOVING AROUND
+
+hjkl
+use w or e to mowe faster forward in line
+gg   - go to start of file
+G    - go to end of file
+:69  - go to line 69
+
+
+	SEARCH
+
+/
+n   		- next
+N   		- opposite direction
+Ctrl+o		- go back to where you came from
+:set hls	- highlight all matching phrases
+# Prepend "no" to switch an option off:   :set nohls
+
+
+
+	COMPLETION
+
+
+              ** Command line completion with CTRL-D and <TAB> **
+
+  1. Make sure Vim is not in compatible mode:  :set nocp
+
+  2. Look what files exist in the directory:  :!ls   or  :!dir
+
+  3. Type the start of a command:  :e
+
+  4. Press  CTRL-D  and Vim will show a list of commands that start with "e".
+
+  5. Type  d<TAB>  and Vim will complete the command name to ":edit".
+
+  6. Now add a space and the start of an existing file name:  :edit FIL
+
+  7. Press <TAB>.  Vim will complete the name (if it is unique).
+
+NOTE:  Completion works for many commands.  Just try pressing CTRL-D and
+       <TAB>.  It is especially useful for  :help .
+
