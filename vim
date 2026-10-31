@@ -83,7 +83,12 @@ Ctrl+r  # to redo
 	MOVING AROUND
 
 hjkl
-use w or e to mowe faster forward in line
+w	 - move forward to the beginning of next word # 3w, 14w, ...
+e    - move forward to the end of next word       # 2e, ...    
+b	 - move backward to the start of the current or previous word
+B    - treat any sequence of non-whitespace characters as a word
+be	 - move backward to the end of the current or previous word
+
 gg   - go to start of file
 G    - go to end of file
 :69  - go to line 69
@@ -122,3 +127,6 @@ Ctrl+o		- go back to where you came from
 NOTE:  Completion works for many commands.  Just try pressing CTRL-D and
        <TAB>.  It is especially useful for  :help .
 
+
+
+.  - repeats the last change command
