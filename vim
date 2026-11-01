@@ -1,8 +1,3 @@
-
-
-
-
-
 	REPLACE OCCURRENCES OF A WORD
 
      type   :#,#s/old/new/g    where #,# are the line numbers of the range
@@ -108,6 +103,18 @@ Ctrl+o		- go back to where you came from
 :set hls	- highlight all matching phrases
 # Prepend "no" to switch an option off:   :set nohls
 
+
+	UPPERCASE LOWERCASE
+
+~	- toggles the character upperase lowercase
+
+gU 	- followed by any motion 
+gUw - uppercase for the rest of the word 
+gUU - uppercase for the entire line converts the selected text to uppercase
+
+guw		- lowercase for the rest of the word
+guiw 	- lowercase the "inner word" regardless of cursor position 
+guu 	- lowercase the entire current line
 
 
 	COMPLETION
