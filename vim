@@ -1,10 +1,3 @@
-  A short list of motions:
-    w - until the start of the next word, EXCLUDING its first character.
-    e - to the end of the current word, INCLUDING the last character.
-    $ - to the end of the line, INCLUDING the last character.
-	0 - to the start of the line
-
-Typing a number before a motion repeats it that many times.
 
 
 
@@ -66,6 +59,11 @@ d3w  # deletes three words
 # to delete lines 5 through 10, you would type:
 :5,10d
 
+# to enter visual mode press v for selecting characters, V for lines and
+# Ctrl+q for block. You have to map Ctrl+v, which is reserved for pasting to Ctrl+q
+# edit .vimrc by adding this line: nnoremap <C-Q> <C-V>
+
+
 r - replace the character under the cursor
 R - replace the following characters without moving the text to the right.
 
@@ -81,6 +79,13 @@ Ctrl+r  # to redo
 
 
 	MOVING AROUND
+
+w - until the start of the next word, EXCLUDING its first character.
+e - to the end of the current word, INCLUDING the last character.
+$ - to the end of the line, INCLUDING the last character.
+0 - to the start of the line
+
+Typing a number before a motion repeats it that many times.
 
 hjkl
 w	 - move forward to the beginning of next word # 3w, 14w, ...
